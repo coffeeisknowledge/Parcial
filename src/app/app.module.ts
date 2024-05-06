@@ -17,6 +17,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 import { HomeComponent } from './public/pages/home/home.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
@@ -25,6 +26,10 @@ import { MentalStateExamsComponent } from './high/pages/mental-state-exams/menta
 import { ExamsApiService } from './high/services/exams-api.service';
 import { PatientsApiService } from './high/services/patients-api.service';
 import { ExaminersApiService } from './high/services/examiners-api.service';
+import { LanguageSwitcherComponent } from './public/components/language-switcher/language-switcher.component';
+
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
@@ -32,7 +37,8 @@ import { ExaminersApiService } from './high/services/examiners-api.service';
     HomeComponent,
     PageNotFoundComponent,
     ExamListComponent,
-    MentalStateExamsComponent
+    MentalStateExamsComponent,
+    LanguageSwitcherComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +54,9 @@ import { ExaminersApiService } from './high/services/examiners-api.service';
     MatPaginatorModule,
     MatToolbarModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    TranslateModule,
+    MatButtonToggleModule
   ],
   providers: [
     provideAnimationsAsync(), ExamsApiService, PatientsApiService, ExaminersApiService
