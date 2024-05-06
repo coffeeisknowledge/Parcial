@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+//import { Exams } from '../../model/exams.entity';
 
 @Component({
   selector: 'app-exam-list',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './exam-list.component.css'
 })
 export class ExamListComponent {
-
+  @Input() mentalStateExams: Array<any> = [];
 }

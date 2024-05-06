@@ -1,0 +1,45 @@
+.exam-card {
+  margin: 20px;
+  max-width: 1000px;
+}
+
+.actions-section {
+  display: flex;
+  justify-content: center;
+}
+
+.action-button {
+  text-transform: uppercase;
+  font-size: large;
+}
+
+.custom-button {
+  color: royalblue;
+  border: 2px solid aqua;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.default-spacer {
+  flex: 1 1 auto;
+}
+
+.circle-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+.country-header-image {
+  background-size: cover;
+}

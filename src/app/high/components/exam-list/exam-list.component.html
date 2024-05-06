@@ -1,1 +1,15 @@
-<p>exam-list works!</p>
+<mat-card *ngFor="let exam of mentalStateExams" class="exam-card">
+  <mat-card-header>
+      <mat-card-title> {{ exam.patientname }}</mat-card-title>
+      <mat-card-subtitle> {{ exam.birthDate }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="exam.photoUrl" alt="Product photo">
+  <mat-card-content>
+    <br>
+    <p><b>Exam ID:</b> {{ exam.idExam }}</p>
+    <p><b>Exam Date:</b> {{ exam.examDate }}</p>
+    <p><b>Examiner:</b> {{ exam.examinerName }}</p>
+    <p><b>Examiner National Provider Identifier:</b> {{ exam.examinerNationalProviderIdentifier }}</p>
+    <p><b>Total Score:</b> {{ exam.totalScore }}</p>
+  </mat-card-content>
+</mat-card>

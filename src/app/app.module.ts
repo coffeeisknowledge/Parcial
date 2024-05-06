@@ -21,13 +21,18 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import { HomeComponent } from './public/pages/home/home.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import { ExamListComponent } from './high/components/exam-list/exam-list.component';
+import { MentalStateExamsComponent } from './high/pages/mental-state-exams/mental-state-exams.component';
+import { ExamsApiService } from './high/services/exams-api.service';
+import { PatientsApiService } from './high/services/patients-api.service';
+import { ExaminersApiService } from './high/services/examiners-api.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
-    ExamListComponent
+    ExamListComponent,
+    MentalStateExamsComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,7 @@ import { ExamListComponent } from './high/components/exam-list/exam-list.compone
     MatGridListModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(), ExamsApiService, PatientsApiService, ExaminersApiService
   ],
   bootstrap: [AppComponent]
 })
