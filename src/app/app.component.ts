@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'parcial';
+  title = 'HIGN';
+  options = [
+    { path: '/home', title: 'Home'},
+    { path: '/mental-state-exams', title: 'Mental State Exams'},
+  ]
 }
